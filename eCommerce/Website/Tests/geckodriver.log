@@ -1,0 +1,39 @@
+1567438572595	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\NTSIKE~1\\AppData\\Local\\Temp\\rust_mozprofile.nXGJiFScZY0c"
+1567438578909	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1567438578909	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1567438578909	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1567438578909	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1567438588446	Marionette	INFO	Listening on port 51269
+1567438588918	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://sportscene.tfguat.co.za/home;jsessionid=ncqjRYu5QJOzkTsvxVAo2acbylvqZFo5ltJwYFIl.com2 line 2039 > scriptElement, line 1: ReferenceError: jQuery is not defined
+JavaScript error: https://sportscene.tfguat.co.za/myaccount/login.jsp;jsessionid=ncqjRYu5QJOzkTsvxVAo2acbylvqZFo5ltJwYFIl?redirectLoginURL=/home&redirectURL=/home line 2039 > scriptElement, line 1: ReferenceError: jQuery is not defined
+JavaScript error: , line 0: uncaught exception: [object Object]
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: http://%(server)s/dummy/blocklist//buckets/monitor/collections/changes/records?_expected=%221567199562295%22 is not a valid URL..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:201:13
+
+[Child 69928, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1562361253/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 69928, Chrome_ChildThread] WARNING: pipe error: 109: fi[Child 22100, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1562361253/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 22100, Chrome_ChildT[Child 64352, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1562361253/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 64352, Chrome_ChildThread] WARNING: pipe error:[Child 26860, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1562361253/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 26860, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1562361253/build/src/ip1567438807109	Marionette	INFO	Stopped listening on port 51269
+[GPU 49820, 
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+Chrome_Cthis session
+[Parent 49324, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1562361253/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 49324, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1562361253/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 18584, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1562361253/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 57188, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1562361253/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341[Parent 49324, Gecko_IOThread] WARNING: file z:/task_1562361253/build/src/ipc/chromium/src/base/process_util_win.cc, line 160
+
+[Child 57188, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1562361253/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 49324, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1562361253/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 24652, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1562361253/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 24652, Chrome_ChildThread] WARNING: pi1567438773631	Marionette	INFO	Stopped listening on port 51478
+[GPU 69316,
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+

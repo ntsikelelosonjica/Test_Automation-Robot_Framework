@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.7.0 on win32)" generated="20190902 17:35:23.745" rpa="false">
+<suite id="s1" name="ECOM Regression Pack" source="C:\Python27\ECOM\eCommerce\Website\Tests\ECOM_Regression_Pack.robot">
+<test id="s1-t1" name="Sign In Existing Email">
+<kw name="Get Length" library="BuiltIn">
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<arguments>
+<arg>${SignInEmailAll}</arg>
+</arguments>
+<assign>
+<var>${LengthOfList}</var>
+</assign>
+<msg timestamp="20190902 17:35:28.462" level="INFO">Length is 5</msg>
+<msg timestamp="20190902 17:35:28.462" level="INFO">${LengthOfList} = 5</msg>
+<status status="PASS" starttime="20190902 17:35:28.462" endtime="20190902 17:35:28.462"></status>
+</kw>
+<kw name="${index} IN RANGE [ ${LengthOfList} ]" type="for">
+<kw name="${index} = 0" type="foritem">
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${index}</arg>
+</arguments>
+<msg timestamp="20190902 17:35:28.463" level="INFO">${index} = 0</msg>
+<status status="PASS" starttime="20190902 17:35:28.463" endtime="20190902 17:35:28.463"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Sign In</arg>
+</arguments>
+<kw name="Sign In" library="SignInResource">
+<kw name="Register or Login Page" library="CommonResource">
+<kw name="Home Page" library="CommonResource">
+<arguments>
+<arg>${index}</arg>
+</arguments>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>@{browsers}[${index}]</arg>
+</arguments>
+<msg timestamp="20190902 17:35:28.464" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20190902 17:35:28.464" endtime="20190902 17:35:35.674"></status>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>@{sites}[${index}]</arg>
+</arguments>
+<msg timestamp="20190902 17:35:35.674" level="INFO">Opening url 'https://tfg:fjzgMSdS0fkB@home.tfguat.co.za/'</msg>
+<status status="PASS" starttime="20190902 17:35:35.674" endtime="20190902 17:35:45.471"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20190902 17:35:45.471" endtime="20190902 17:35:46.605"></status>
+</kw>
+<status status="PASS" starttime="20190902 17:35:28.464" endtime="20190902 17:35:46.605"></status>
+</kw>
+<kw name="Profile Icon in Header" library="CommonResource">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${ProfileHeaderIcon}</arg>
+</arguments>
+<msg timestamp="20190902 17:35:46.606" level="INFO">Clicking element 'css=#header-content &gt; div &gt; div &gt; div &gt; a:nth-child(2) &gt; div &gt; span.header__control-copy.header__control-copy--alt'.</msg>
+<status status="PASS" starttime="20190902 17:35:46.606" endtime="20190902 17:35:49.482"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20190902 17:35:51.483" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20190902 17:35:49.483" endtime="20190902 17:35:51.483"></status>
+</kw>
+<status status="PASS" starttime="20190902 17:35:46.606" endtime="20190902 17:35:51.483"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>How would you like to sign in?</arg>
+<arg>40s</arg>
+</arguments>
+<status status="PASS" starttime="20190902 17:35:51.483" endtime="20190902 17:35:51.508"></status>
+</kw>
+<status status="PASS" starttime="20190902 17:35:28.463" endtime="20190902 17:35:51.508"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>This website uses cookies</arg>
+<arg>30s</arg>
+</arguments>
+<status status="PASS" starttime="20190902 17:35:51.508" endtime="20190902 17:35:51.525"></status>
+</kw>
+<kw name="Close Cookie Notification" library="CommonResource">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${CloseCookieNotificationEcom}</arg>
+</arguments>
+<msg timestamp="20190902 17:35:51.526" level="INFO">Clicking element 'css=body &gt; div.cookie-notification.is--visible.js-tfg-view.js-tfg-view-cookie-notification &gt; div &gt; div.cookie-notification__close.js-cookie-notification-close &gt; i'.</msg>
+<status status="PASS" starttime="20190902 17:35:51.526" endtime="20190902 17:35:51.584"></status>
+</kw>
+<status status="PASS" starttime="20190902 17:35:51.525" endtime="20190902 17:35:51.584"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${SignInSignInButton1}</arg>
+</arguments>
+<msg timestamp="20190902 17:35:51.584" level="INFO">Clicking element 'css=body &gt; div.outer-container.js-outer-container.js-header-adjust.state--expand &gt; section &gt; div.inner-container.inner-container--content &gt; div &gt; div &gt; div.register-login__container.js-register-login &gt; div.register-login__content &gt; div:nth-child(3) &gt; div'.</msg>
+<status status="PASS" starttime="20190902 17:35:51.584" endtime="20190902 17:35:51.688"></status>
+</kw>
+<status status="PASS" starttime="20190902 17:35:28.463" endtime="20190902 17:35:51.688"></status>
+</kw>
+<status status="PASS" starttime="20190902 17:35:28.463" endtime="20190902 17:35:51.689"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Type Existing Email Address to Sign In with Correct Password</arg>
+<arg>${index}</arg>
+</arguments>
+<kw name="Type Existing Email Address to Sign In with Correct Password" library="SignInResource">
+<arguments>
+<arg>${index}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${SignInEmailAddressField}</arg>
+<arg>@{SignInEmailAll}[${index}]</arg>
+</arguments>
+<msg timestamp="20190902 17:35:51.690" level="INFO">Typing text 'amysmith@davila.com' into text field 'id=login__email'.</msg>
+<status status="PASS" starttime="20190902 17:35:51.689" endtime="20190902 17:35:51.850"></status>
+</kw>
+<kw name="Type Correct Password and Click Sign In For Correct Details" library="SignInResource">
+<kw name="Input Password" library="SeleniumLibrary">
+<doc>Types the given password into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${SignInPasswordField}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20190902 17:35:51.851" level="INFO">Typing password into text field 'id=login__pass'.</msg>
+<status status="PASS" starttime="20190902 17:35:51.850" endtime="20190902 17:35:51.948"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${SignInSignInButton2}</arg>
+</arguments>
+<msg timestamp="20190902 17:35:51.948" level="INFO">Clicking element 'css=#tfg-sign-in-form &gt; fieldset.fieldset.fieldset--grid &gt; div &gt; input'.</msg>
+<status status="PASS" starttime="20190902 17:35:51.948" endtime="20190902 17:35:52.032"></status>
+</kw>
+<kw name="Look for Accounts &amp; Orders" library="CommonResource">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>Accounts &amp; Orders</arg>
+<arg>1min</arg>
+</arguments>
+<status status="PASS" starttime="20190902 17:35:52.032" endtime="20190902 17:36:03.428"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20190902 17:36:08.429" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20190902 17:36:03.429" endtime="20190902 17:36:08.429"></status>
+</kw>
+<status status="PASS" starttime="20190902 17:35:52.032" endtime="20190902 17:36:08.429"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<arguments>
+<arg>UserLoggedIn-{index}.png</arg>
+</arguments>
+<msg timestamp="20190902 17:36:08.924" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="UserLoggedIn-1.png"&gt;&lt;img src="UserLoggedIn-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20190902 17:36:08.429" endtime="20190902 17:36:08.925"></status>
+</kw>
+<status status="PASS" starttime="20190902 17:35:51.850" endtime="20190902 17:36:08.925"></status>
+</kw>
+<status status="PASS" starttime="20190902 17:35:51.689" endtime="20190902 17:36:08.925"></status>
+</kw>
+<status status="PASS" starttime="20190902 17:35:51.689" endtime="20190902 17:36:08.925"></status>
+</kw>
+<status status="PASS" starttime="20190902 17:35:28.463" endtime="20190902 17:36:08.925"></status>
+</kw>
+<kw name="${index} = 1" type="foritem">
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${index}</arg>
+</arguments>
+<msg timestamp="20190902 17:36:08.925" level="INFO">${index} = 1</msg>
+<status status="PASS" starttime="20190902 17:36:08.925" endtime="20190902 17:36:08.925"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Sign In</arg>
+</arguments>
+<kw name="Sign In" library="SignInResource">
+<kw name="Register or Login Page" library="CommonResource">
+<kw name="Home Page" library="CommonResource">
+<arguments>
+<arg>${index}</arg>
+</arguments>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>@{browsers}[${index}]</arg>
+</arguments>
+<msg timestamp="20190902 17:36:08.927" level="INFO">Opening browser 'firefox' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20190902 17:36:08.926" endtime="20190902 17:36:29.615"></status>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>@{sites}[${index}]</arg>
+</arguments>
+<msg timestamp="20190902 17:36:29.616" level="INFO">Opening url 'https://tfg:fjzgMSdS0fkB@sportscene.tfguat.co.za/home'</msg>
+<status status="PASS" starttime="20190902 17:36:29.616" endtime="20190902 17:36:39.412"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20190902 17:36:39.413" endtime="20190902 17:36:40.425"></status>
+</kw>
+<status status="PASS" starttime="20190902 17:36:08.926" endtime="20190902 17:36:40.425"></status>
+</kw>
+<kw name="Profile Icon in Header" library="CommonResource">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${ProfileHeaderIcon}</arg>
+</arguments>
+<msg timestamp="20190902 17:36:40.426" level="INFO">Clicking element 'css=#header-content &gt; div &gt; div &gt; div &gt; a:nth-child(2) &gt; div &gt; span.header__control-copy.header__control-copy--alt'.</msg>
+<status status="PASS" starttime="20190902 17:36:40.425" endtime="20190902 17:36:46.729"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20190902 17:36:48.730" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20190902 17:36:46.729" endtime="20190902 17:36:48.730"></status>
+</kw>
+<status status="PASS" starttime="20190902 17:36:40.425" endtime="20190902 17:36:48.730"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>How would you like to sign in?</arg>
+<arg>40s</arg>
+</arguments>
+<status status="PASS" starttime="20190902 17:36:48.730" endtime="20190902 17:36:48.766"></status>
+</kw>
+<status status="PASS" starttime="20190902 17:36:08.926" endtime="20190902 17:36:48.766"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>This website uses cookies</arg>
+<arg>30s</arg>
+</arguments>
+<status status="PASS" starttime="20190902 17:36:48.767" endtime="20190902 17:36:48.777"></status>
+</kw>
+<kw name="Close Cookie Notification" library="CommonResource">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${CloseCookieNotificationEcom}</arg>
+</arguments>
+<msg timestamp="20190902 17:36:48.778" level="INFO">Clicking element 'css=body &gt; div.cookie-notification.is--visible.js-tfg-view.js-tfg-view-cookie-notification &gt; div &gt; div.cookie-notification__close.js-cookie-notification-close &gt; i'.</msg>
+<status status="PASS" starttime="20190902 17:36:48.777" endtime="20190902 17:36:49.007"></status>
+</kw>
+<status status="PASS" starttime="20190902 17:36:48.777" endtime="20190902 17:36:49.008"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${SignInSignInButton1}</arg>
+</arguments>
+<msg timestamp="20190902 17:36:49.008" level="INFO">Clicking element 'css=body &gt; div.outer-container.js-outer-container.js-header-adjust.state--expand &gt; section &gt; div.inner-container.inner-container--content &gt; div &gt; div &gt; div.register-login__container.js-register-login &gt; div.register-login__content &gt; div:nth-child(3) &gt; div'.</msg>
+<status status="PASS" starttime="20190902 17:36:49.008" endtime="20190902 17:36:49.268"></status>
+</kw>
+<status status="PASS" starttime="20190902 17:36:08.926" endtime="20190902 17:36:49.268"></status>
+</kw>
+<status status="PASS" starttime="20190902 17:36:08.926" endtime="20190902 17:36:49.268"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Type Existing Email Address to Sign In with Correct Password</arg>
+<arg>${index}</arg>
+</arguments>
+<kw name="Type Existing Email Address to Sign In with Correct Password" library="SignInResource">
+<arguments>
+<arg>${index}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${SignInEmailAddressField}</arg>
+<arg>@{SignInEmailAll}[${index}]</arg>
+</arguments>
+<msg timestamp="20190902 17:36:49.269" level="INFO">Typing text 'ntsikelelo200@gmail.com' into text field 'id=login__email'.</msg>
+<status status="PASS" starttime="20190902 17:36:49.268" endtime="20190902 17:36:50.169"></status>
+</kw>
+<kw name="Type Correct Password and Click Sign In For Correct Details" library="SignInResource">
+<kw name="Input Password" library="SeleniumLibrary">
+<doc>Types the given password into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${SignInPasswordField}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20190902 17:36:50.170" level="INFO">Typing password into text field 'id=login__pass'.</msg>
+<status status="PASS" starttime="20190902 17:36:50.169" endtime="20190902 17:36:50.205"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${SignInSignInButton2}</arg>
+</arguments>
+<msg timestamp="20190902 17:36:50.205" level="INFO">Clicking element 'css=#tfg-sign-in-form &gt; fieldset.fieldset.fieldset--grid &gt; div &gt; input'.</msg>
+<status status="PASS" starttime="20190902 17:36:50.205" endtime="20190902 17:36:50.458"></status>
+</kw>
+<kw name="Look for Accounts &amp; Orders" library="CommonResource">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>Accounts &amp; Orders</arg>
+<arg>1min</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190902 17:37:50.683" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20190902 17:37:50.625" endtime="20190902 17:37:50.684"></status>
+</kw>
+<msg timestamp="20190902 17:37:50.738" level="FAIL">Text 'Accounts &amp; Orders' did not appear in 1 minute.</msg>
+<status status="FAIL" starttime="20190902 17:36:50.459" endtime="20190902 17:37:50.738"></status>
+</kw>
+<status status="FAIL" starttime="20190902 17:36:50.458" endtime="20190902 17:37:50.738"></status>
+</kw>
+<status status="FAIL" starttime="20190902 17:36:50.169" endtime="20190902 17:37:50.738"></status>
+</kw>
+<status status="FAIL" starttime="20190902 17:36:49.268" endtime="20190902 17:37:50.738"></status>
+</kw>
+<status status="FAIL" starttime="20190902 17:36:49.268" endtime="20190902 17:37:50.738"></status>
+</kw>
+<status status="FAIL" starttime="20190902 17:36:08.925" endtime="20190902 17:37:50.738"></status>
+</kw>
+<kw name="${index} = 2" type="foritem">
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${index}</arg>
+</arguments>
+<msg timestamp="20190902 17:37:50.739" level="INFO">${index} = 2</msg>
+<status status="PASS" starttime="20190902 17:37:50.739" endtime="20190902 17:37:50.739"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Sign In</arg>
+</arguments>
+<kw name="Sign In" library="SignInResource">
+<kw name="Register or Login Page" library="CommonResource">
+<kw name="Home Page" library="CommonResource">
+<arguments>
+<arg>${index}</arg>
+</arguments>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>@{browsers}[${index}]</arg>
+</arguments>
+<msg timestamp="20190902 17:37:50.740" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20190902 17:37:50.740" endtime="20190902 17:37:53.702"></status>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>@{sites}[${index}]</arg>
+</arguments>
+<msg timestamp="20190902 17:37:53.703" level="INFO">Opening url 'https://tfg:fjzgMSdS0fkB@hi-online.tfguat.co.za/home'</msg>
+<status status="PASS" starttime="20190902 17:37:53.702" endtime="20190902 17:38:11.240"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20190902 17:38:11.241" endtime="20190902 17:38:12.388"></status>
+</kw>
+<status status="PASS" starttime="20190902 17:37:50.740" endtime="20190902 17:38:12.388"></status>
+</kw>
+<kw name="Profile Icon in Header" library="CommonResource">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${ProfileHeaderIcon}</arg>
+</arguments>
+<msg timestamp="20190902 17:38:12.389" level="INFO">Clicking element 'css=#header-content &gt; div &gt; div &gt; div &gt; a:nth-child(2) &gt; div &gt; span.header__control-copy.header__control-copy--alt'.</msg>
+<status status="PASS" starttime="20190902 17:38:12.389" endtime="20190902 17:38:17.901"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20190902 17:38:19.901" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20190902 17:38:17.901" endtime="20190902 17:38:19.901"></status>
+</kw>
+<status status="PASS" starttime="20190902 17:38:12.388" endtime="20190902 17:38:19.901"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>How would you like to sign in?</arg>
+<arg>40s</arg>
+</arguments>
+<status status="PASS" starttime="20190902 17:38:19.901" endtime="20190902 17:38:19.920"></status>
+</kw>
+<status status="PASS" starttime="20190902 17:37:50.740" endtime="20190902 17:38:19.920"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>This website uses cookies</arg>
+<arg>30s</arg>
+</arguments>
+<status status="PASS" starttime="20190902 17:38:19.920" endtime="20190902 17:38:19.938"></status>
+</kw>
+<kw name="Close Cookie Notification" library="CommonResource">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${CloseCookieNotificationEcom}</arg>
+</arguments>
+<msg timestamp="20190902 17:38:19.938" level="INFO">Clicking element 'css=body &gt; div.cookie-notification.is--visible.js-tfg-view.js-tfg-view-cookie-notification &gt; div &gt; div.cookie-notification__close.js-cookie-notification-close &gt; i'.</msg>
+<status status="PASS" starttime="20190902 17:38:19.938" endtime="20190902 17:38:19.997"></status>
+</kw>
+<status status="PASS" starttime="20190902 17:38:19.938" endtime="20190902 17:38:19.997"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${SignInSignInButton1}</arg>
+</arguments>
+<msg timestamp="20190902 17:38:19.997" level="INFO">Clicking element 'css=body &gt; div.outer-container.js-outer-container.js-header-adjust.state--expand &gt; section &gt; div.inner-container.inner-container--content &gt; div &gt; div &gt; div.register-login__container.js-register-login &gt; div.register-login__content &gt; div:nth-child(3) &gt; div'.</msg>
+<status status="PASS" starttime="20190902 17:38:19.997" endtime="20190902 17:38:20.054"></status>
+</kw>
+<status status="PASS" starttime="20190902 17:37:50.739" endtime="20190902 17:38:20.054"></status>
+</kw>
+<status status="PASS" starttime="20190902 17:37:50.739" endtime="20190902 17:38:20.054"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Type Existing Email Address to Sign In with Correct Password</arg>
+<arg>${index}</arg>
+</arguments>
+<kw name="Type Existing Email Address to Sign In with Correct Password" library="SignInResource">
+<arguments>
+<arg>${index}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${SignInEmailAddressField}</arg>
+<arg>@{SignInEmailAll}[${index}]</arg>
+</arguments>
+<msg timestamp="20190902 17:38:20.055" level="INFO">Typing text 'ntsikelelo101@gmail.com' into text field 'id=login__email'.</msg>
+<status status="PASS" starttime="20190902 17:38:20.055" endtime="20190902 17:38:20.208"></status>
+</kw>
+<kw name="Type Correct Password and Click Sign In For Correct Details" library="SignInResource">
+<kw name="Input Password" library="SeleniumLibrary">
+<doc>Types the given password into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${SignInPasswordField}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20190902 17:38:20.210" level="INFO">Typing password into text field 'id=login__pass'.
